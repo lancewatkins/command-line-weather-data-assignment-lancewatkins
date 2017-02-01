@@ -17,7 +17,7 @@ Search tool:
 ## sed
 String Processing, eg: to find and replace text per line:
 ```
-  sed "s/searchfor/replacewith/g"
+  sed "s/searchfor/replacewith/g" filename.txt
 ```
 
 ## wc
@@ -27,12 +27,12 @@ Count lines of file(s)
 ```
 
 # Instructions
- - Search for just the data collected on the 43rd day of the year, here is a starting point:
+ - Search for just the data collected on the 43rd day of the year (February 12, 2016), here is a starting point:
  `grep 43 data/*.txt` Once your happy with your search results write them to a file:
 
  `grep 43 data/*.txt > results/new.txt`
 
- *(If your reading these instructions and paying attention in our class lectures carefully then don't call your file new.txt, name it something better so that its clear what that file is or contains.)*
+ *(If your reading these instructions and paying attention in our class lectures carefully then please don't call your file new.txt. name it something better so that its clear what that file is.)*
  - Now your search results are not quite right, they have the filename that the search match came from as the first thing on the line. It would be much more useful if that were in its own column. Since this is a CSV file we can do that with some simple find/replace sed magic! This should get you close:
 
  `sed "s/.txt:/,/g" results/new.txt`
