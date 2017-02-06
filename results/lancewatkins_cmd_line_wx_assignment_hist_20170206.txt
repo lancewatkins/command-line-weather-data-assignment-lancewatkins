@@ -1,0 +1,162 @@
+    1  cd..
+    2  ssh -Y relder@saguaro.fulton.asu.edu
+    3  ssh -Y relder@saguaro.fulton.asu.edu
+    4  ls
+    5  cd Desktop
+    6  ls
+    7  cd /
+    8  cd -
+    9  cs Onedrive
+   10  ls
+   11  cd OneDrive
+   12  ls
+   13  cd ASU
+   14  ls
+   15  cd BRACE
+   16  ls
+   17  cd CMAQ_Karner
+   18  cd Data
+   19  ls
+   20  cd Ozone
+   21  ls
+   22  rm GADM_2.8_USA_adm2.rds
+   23  ls
+   24  rm MAX8hr_4th_2010_ref_L1.tif
+   25  ls
+   26  cd
+   27  ls
+   28  cd -
+   29  ls
+   30  export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+   31  pwd
+   32  gdalinfo MAX8hr_4th.2010_ref_year.nc
+   33  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"MAX8hr_4th.2010_ref_year.nc":O3 outMAX8hr_4th_2010_ref_year.nc
+   34  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"MAX8hr_4th.2050_ref_year":O3 outMAX8hr_4th_2050_ref_year.nc
+   35  ls
+   36  cd Desktop
+   37  ls
+   38  cd OneDrive\ASU
+   39  cd OneDrive/ASU
+   40  ls
+   41  cd BRACE/CMAQ_Karner/Data/Ozone
+   42  ls
+   43  gdalinfo MAX8hr_4th.2050_B1_year
+   44  export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+   45  gdalinfo MAX8hr_4th.2050_B1_year
+   46  gdalinfo MAX8hr_4th.2010_ref_year
+   47  ls
+   48  gdalinfo MAX8hr_4th.2010_ref_year.nc
+   49  gdalinfo MAX8hr_4th.2010_ref_year
+   50  gdalinfo MAX8hr_4th.2050_B1_year
+   51  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"MAX8hr_4th.2050_B1_year":O3 MAX8hr_4th_2050_B1_year.nc
+   52  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"MAX8hr_4th.2050_S1_year":O3 MAX8hr_4th_2050_S1_year.nc
+   53  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"MAX8hr_4th.2050_S2_year":O3 MAX8hr_4th_2050_S2_year.nc
+   54  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"MAX8hr_4th.2050_T2_year":O3 MAX8hr_4th_2050_T2_year.nc
+   55  cd-
+   56  cd -
+   57  cd BRACE/CMAQ_Karner/Data/PM2.5/CMAQ_climatescenarios
+   58  ls
+   59  gdalinfo avall_ACONC.2010_ref_dec
+   60  ls
+   61  gdalinfo avall_ACONC.2010_ref_fal
+   62  ls
+   63  gdalinfo avall_ACONC.2050_B1_dec
+   64  ls[1]
+   65  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2010_ref_dec":PM25 avall_ACONC_2010_ref_dec.nc
+   66  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2010_ref_fal":PM25 avall_ACONC_2010_ref_fal.nc
+   67  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2010_ref_spr":PM25 avall_ACONC_2010_ref_spr.nc
+   68  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2010_ref_sum":PM25 avall_ACONC_2010_ref_sum.nc
+   69  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2010_ref_win":PM25 avall_ACONC_2010_ref_win.nc
+   70  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_ref_dec":PM25 avall_ACONC_2050_ref_dec.nc
+   71  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_ref_fal":PM25 avall_ACONC_2050_ref_fal.nc
+   72  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_ref_spr":PM25 avall_ACONC_2050_ref_spr.nc
+   73  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_ref_sum":PM25 avall_ACONC_2050_ref_sum.nc
+   74  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_ref_win":PM25 avall_ACONC_2050_ref_win.nc
+   75  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_B1_dec":PM25 avall_ACONC_2050_B1_dec.nc
+   76  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_B1_fal":PM25 avall_ACONC_2050_B1_fal.nc
+   77  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_B1_spr":PM25 avall_ACONC_2050_B1_spr.nc
+   78  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_B1_sum":PM25 avall_ACONC_2050_B1_sum.nc
+   79  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_B1_win":PM25 avall_ACONC_2050_B1_win.nc
+   80  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_CP_dec":PM25 avall_ACONC_2050_CP_dec.nc
+   81  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_CP_fal":PM25 avall_ACONC_2050_CP_fal.nc
+   82  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_CP_spr":PM25 avall_ACONC_2050_CP_spr.nc
+   83  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_CP_sum":PM25 avall_ACONC_2050_CP_sum.nc
+   84  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_CP_win":PM25 avall_ACONC_2050_CP_win.nc
+   85  ls
+   86  cd Desktop/OneDrive/ASU/BRACE/
+   87  ls
+   88  cd CMAQ_Karner/Data/
+   89  ls
+   90  cd PM2.5
+   91  ls
+   92  cd CMAQ_climatescenarios
+   93  ls
+   94  export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+   95  gdalinfo avall_ACONC.2050_S1_dec
+   96  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S1_dec":PM25 avall_ACONC_2050_S1_dec.nc
+   97  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S1_fal":PM25 avall_ACONC_2050_S1_fal.nc
+   98  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S1_spr":PM25 avall_ACONC_2050_S1_spr.nc
+   99  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S1_sum":PM25 avall_ACONC_2050_S1_sum.nc
+  100  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S1_win":PM25 avall_ACONC_2050_S1_win.nc
+  101  ls
+  102  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S2_dec":PM25 avall_ACONC_2050_S2_dec.nc
+  103  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S2_fal":PM25 avall_ACONC_2050_S2_fal.nc
+  104  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S2_spr":PM25 avall_ACONC_2050_S2_spr.nc
+  105  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S2_sum":PM25 avall_ACONC_2050_S2_sum.nc
+  106  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_S2_win":PM25 avall_ACONC_2050_S2_win.nc
+  107  ls
+  108  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_T2_fal":PM25 avall_ACONC_2050_T2_fal.nc
+  109  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_T2_fal":PM25 avall_ACONC_2050_T2_fal.nc
+  110  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_T2_spr":PM25 avall_ACONC_2050_T2_spr.nc
+  111  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_T2_sum":PM25 avall_ACONC_2050_T2_sum.nc
+  112  gdal_translate -of netCDF -a_ullr -2736000 1944000 2592000 -2448000 -a_srs "+proj=lcc +lat_1=33 +lat_2=45 +lat_0=40 +lon_0=-97 +x_0=0 +y_0=0 +a=6370000 +b=6370000 +units=m +no_defs" NETCDF:"avall_ACONC.2050_T2_win":PM25 avall_ACONC_2050_T2_win.nc
+  113  ls
+  114  git
+  115  git --version
+  116  git --version
+  117  echo "export PATH=/usr/local/git/bin:/usr/local/bin:/usr/local/sbin:$PATH" >> ~/.bash_profile
+  118  source ~/.bash_profile
+  119  git --version
+  120  git config --global user.name "lancewatkins"
+  121  ls
+  122  cd Desktop
+  123  ls
+  124  cd OneDrive
+  125  ls
+  126  cd ASU
+  127  ls
+  128  cd 'Spring 2017'
+  129  ls
+  130  git clone https://github.com/lancewatkins/command-line-weather-data-assignment-lancewatkins.git
+  131  ls
+  132  cd command-line-weather-data-assignment-lancewatkins/
+  133  ls
+  134  start data/README.md
+  135  open data/README.md
+  136  grep 43 data/*.txt
+  137  grep 2016,43 data/*.txt > results/43_subset.txt
+  138  sed "s./txt:/,/g" > results/sed_43.txt
+  139  sed "s./txt:/,/g" results/sed_43.txt
+  140  "s./txt:/,/g" results/43_subset.txt
+  141  sed "s./txt:/,/g" results/43_subset.txt
+  142  sed "s/.txt:/,/g" results/43_subset.txt
+  143  sed "s/data//g" results/43_subset.txt
+  144  sed "s/.txt:/,/g" results/43_subset.txt > 43_subset.txt
+  145  open 43_subset.txt
+  146* sed "s/data///g; " results/43_subset.txt > 43_subset.txt
+  147  open 43_subset.txt
+  148  sed "s/.txt:/,/g" results/43_subset.txt > 43_subset2.txt
+  149  open 43_subset2.txt
+  150  grep 2016,43 data/*.txt > results/43sub.txt
+  151  sed "s/.txt:/,/g" results/43sub.txt
+  152  sed "s/.txt:/,/g" results/43sub.txt > 43_1strep.txt
+  153  sed "s/'data/'//g" results/43_1strep.txt
+  154  sed "s/data//g" results/43_1strep.txt
+  155  sed "s/.txt:/,/g" results/43sub.txt
+  156  sed "s/.txt:/,/g" results/43sub.txt > results/43sub_1strep.txt
+  157  sed "s/data///g" results/43sub_1strep.txt 
+  158  sed "s/data//g" results/43sub_1strep.txt 
+  159  sed "s/data//g" results/43sub_1strep.txt > results/43sub_2ndrep.txt
+  160  sed "s/^.//g" results/43sub_2ndrep.txt
+  161  sed "s/^.//g" results/43sub_2ndrep.txt > results/Feb12_2016_AZMet.txt
+  162  history > results/lancewatkins_cmd_line_wx_assignment_hist_20170206.txt
